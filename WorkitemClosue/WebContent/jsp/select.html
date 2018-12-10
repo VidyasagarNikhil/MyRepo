@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome Screen</title>
+
+<script>
+
+function validateForm() {
+    var x = document.forms["myForm"]["id"].value;
+    if (x < 1) {
+        alert("Invallid Event ID");
+        return false;
+    }
+}
+
+</script>
+<style>
+
+
+
+#submit {
+background: #015ABC;
+color: #fff;
+border: 2px solid #eee;
+border-radius: 30px;
+width:120px;
+height:25px;
+ 
+}
+</style>
+</head>
+<body style="background-color: maroon;">
+<table align="center" style="background-color:aqua;border-radius:25px;width:800px; height:400px ">
+<tr>
+<br><br><br><br><br><br>
+<th>
+<h1><U><b>Enter Event ID:</b></U></h1>
+</th>
+</tr>
+<form class="w3-container" name="myForm" action="/WorkitemClosue/second" onsubmit="return validateForm()" method="post" >
+<tr>
+<td>
+<h2 align="center">Workitem ID:<input class="w3-input w3-animate-input" type="text" name="id" required style="width:135px"><h2>
+</td>
+</tr>
+
+<tr>
+
+<td>
+<h2 align="center"><input  type="submit" name="submit" value="Search" id="submit"></h2>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
